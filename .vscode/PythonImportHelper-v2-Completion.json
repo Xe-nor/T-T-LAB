@@ -1,0 +1,531 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "LinearRegression",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
+        "documentation": {}
+    },
+    {
+        "label": "LinearRegression",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "LAB10.1",
+        "description": "LAB10.1",
+        "peekOfCode": "data = pd.DataFrame({\n    'Height (IN CMS)': [158, 158, 160, 160, 163, 163, 165, 165, 168, 170],\n    'WEIGHT IN KO)': [58, 62, 60, 59, 61, 60, 61, 65, 66, 64],\n    'T-SHIRT SIZE': ['M', 'M', 'M', 'M', 'M', 'M', 'L', 'L', 'L', 'L'],\n    })\n# Encode T-shirt size as numerical values\ndata['T-SHIRT SIZE'] = data['T-SHIRT SIZE'].replace({'M': 0, 'L': 1})\n# Extract the input and output variables\nX = data[['Height (IN CMS)', 'WEIGHT IN KO)']]\ny = data['T-SHIRT SIZE']",
+        "detail": "LAB10.1",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 5,
+        "importPath": "LAB10.1",
+        "description": "LAB10.1",
+        "peekOfCode": "X = data[['Height (IN CMS)', 'WEIGHT IN KO)']]\ny = data['T-SHIRT SIZE']\n# Create a LinearRegression object and fit the data\nmodel = LinearRegression()\nmodel.fit(X, y)\n# Predict T-shirt size for a new customer with height 170 cm and weight 70 kg\nnew_customer = pd.DataFrame({'Height (IN CMS)': [170], 'WEIGHT IN KO)': [70]})\npredicted_tshirt = model.predict(new_customer)\n# Convert the predicted numerical value to the corresponding T-shirt size\nif predicted_tshirt[0] == 0:",
+        "detail": "LAB10.1",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "LAB10.1",
+        "description": "LAB10.1",
+        "peekOfCode": "y = data['T-SHIRT SIZE']\n# Create a LinearRegression object and fit the data\nmodel = LinearRegression()\nmodel.fit(X, y)\n# Predict T-shirt size for a new customer with height 170 cm and weight 70 kg\nnew_customer = pd.DataFrame({'Height (IN CMS)': [170], 'WEIGHT IN KO)': [70]})\npredicted_tshirt = model.predict(new_customer)\n# Convert the predicted numerical value to the corresponding T-shirt size\nif predicted_tshirt[0] == 0:\n    print('Predicted T-shirt size: M')",
+        "detail": "LAB10.1",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "LAB10.1",
+        "description": "LAB10.1",
+        "peekOfCode": "model = LinearRegression()\nmodel.fit(X, y)\n# Predict T-shirt size for a new customer with height 170 cm and weight 70 kg\nnew_customer = pd.DataFrame({'Height (IN CMS)': [170], 'WEIGHT IN KO)': [70]})\npredicted_tshirt = model.predict(new_customer)\n# Convert the predicted numerical value to the corresponding T-shirt size\nif predicted_tshirt[0] == 0:\n    print('Predicted T-shirt size: M')\nelse:\n    print('Predicted T-shirt size: L')",
+        "detail": "LAB10.1",
+        "documentation": {}
+    },
+    {
+        "label": "new_customer",
+        "kind": 5,
+        "importPath": "LAB10.1",
+        "description": "LAB10.1",
+        "peekOfCode": "new_customer = pd.DataFrame({'Height (IN CMS)': [170], 'WEIGHT IN KO)': [70]})\npredicted_tshirt = model.predict(new_customer)\n# Convert the predicted numerical value to the corresponding T-shirt size\nif predicted_tshirt[0] == 0:\n    print('Predicted T-shirt size: M')\nelse:\n    print('Predicted T-shirt size: L')",
+        "detail": "LAB10.1",
+        "documentation": {}
+    },
+    {
+        "label": "predicted_tshirt",
+        "kind": 5,
+        "importPath": "LAB10.1",
+        "description": "LAB10.1",
+        "peekOfCode": "predicted_tshirt = model.predict(new_customer)\n# Convert the predicted numerical value to the corresponding T-shirt size\nif predicted_tshirt[0] == 0:\n    print('Predicted T-shirt size: M')\nelse:\n    print('Predicted T-shirt size: L')",
+        "detail": "LAB10.1",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "LAB10.2",
+        "description": "LAB10.2",
+        "peekOfCode": "data = pd.DataFrame({\n    'Duration': [30, 30, 45, 45, 45, 60, 60, 60, 75, 75],\n    'Average Pulse': [80, 85, 90, 95, 100, 105, 110, 115, 120, 125],\n    'Max Pulse': [120, 120, 130, 130, 140, 140, 145, 145, 150, 150],\n    'Caloric Damage': [240, 250, 260, 270, 280, 290, 300, 310, 320, 330],\n    'Hours Work': [10, 10, 8, 8, 0, 7, 7, 8, 0, 8],\n    'Hours Sleep': [7, 7, 7, 7, 7, 8, 8, 8, 8, 8],\n    })\n# Extract the input and output variables\nX = data[['Average Pulse']]",
+        "detail": "LAB10.2",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 5,
+        "importPath": "LAB10.2",
+        "description": "LAB10.2",
+        "peekOfCode": "X = data[['Average Pulse']]\ny = data['Caloric Damage']\n# Create a LinearRegression object and fit the data\nmodel = LinearRegression()\nmodel.fit(X, y)\n# Predict Caloric Damage for a new patient with an Average Pulse of 110\nnew_patient = pd.DataFrame({'Average Pulse': [110]})\npredicted_calories = model.predict(new_patient)\nprint('Predicted Caloric Damage:', predicted_calories[0])",
+        "detail": "LAB10.2",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "LAB10.2",
+        "description": "LAB10.2",
+        "peekOfCode": "y = data['Caloric Damage']\n# Create a LinearRegression object and fit the data\nmodel = LinearRegression()\nmodel.fit(X, y)\n# Predict Caloric Damage for a new patient with an Average Pulse of 110\nnew_patient = pd.DataFrame({'Average Pulse': [110]})\npredicted_calories = model.predict(new_patient)\nprint('Predicted Caloric Damage:', predicted_calories[0])",
+        "detail": "LAB10.2",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "LAB10.2",
+        "description": "LAB10.2",
+        "peekOfCode": "model = LinearRegression()\nmodel.fit(X, y)\n# Predict Caloric Damage for a new patient with an Average Pulse of 110\nnew_patient = pd.DataFrame({'Average Pulse': [110]})\npredicted_calories = model.predict(new_patient)\nprint('Predicted Caloric Damage:', predicted_calories[0])",
+        "detail": "LAB10.2",
+        "documentation": {}
+    },
+    {
+        "label": "new_patient",
+        "kind": 5,
+        "importPath": "LAB10.2",
+        "description": "LAB10.2",
+        "peekOfCode": "new_patient = pd.DataFrame({'Average Pulse': [110]})\npredicted_calories = model.predict(new_patient)\nprint('Predicted Caloric Damage:', predicted_calories[0])",
+        "detail": "LAB10.2",
+        "documentation": {}
+    },
+    {
+        "label": "predicted_calories",
+        "kind": 5,
+        "importPath": "LAB10.2",
+        "description": "LAB10.2",
+        "peekOfCode": "predicted_calories = model.predict(new_patient)\nprint('Predicted Caloric Damage:', predicted_calories[0])",
+        "detail": "LAB10.2",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "LAB10.salaries",
+        "description": "LAB10.salaries",
+        "peekOfCode": "df = pd.read_csv(r\"C:\\Users\\amare\\Downloads\\Salaries.csv\")\nprint(df)\nresult = df.head(10)\nprint(\"First 10 rows of the DataFrame:\")\nprint(result)\nprint(\"Male Professor with highest salary:\",\n      df[(df['rank'] == 'Prof') & (df['sex'] == 'Male')]['salary'].max())\nprint(\"Male Professor with lowest salary:\",\n      df[(df['rank'] == 'Prof') & (df['sex'] == 'Male')]['salary'].min())\nprint(\"Female Professor with highest salary:\",",
+        "detail": "LAB10.salaries",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "LAB10.salaries",
+        "description": "LAB10.salaries",
+        "peekOfCode": "result = df.head(10)\nprint(\"First 10 rows of the DataFrame:\")\nprint(result)\nprint(\"Male Professor with highest salary:\",\n      df[(df['rank'] == 'Prof') & (df['sex'] == 'Male')]['salary'].max())\nprint(\"Male Professor with lowest salary:\",\n      df[(df['rank'] == 'Prof') & (df['sex'] == 'Male')]['salary'].min())\nprint(\"Female Professor with highest salary:\",\n      df[(df['rank'] == 'Prof') & (df['sex'] == 'Female')]['salary'].max())\nprint(\"Female Professor with lowest salary:\",",
+        "detail": "LAB10.salaries",
+        "documentation": {}
+    },
+    {
+        "label": "df['salary']",
+        "kind": 5,
+        "importPath": "LAB10.salaries",
+        "description": "LAB10.salaries",
+        "peekOfCode": "df['salary'] = df.groupby('service')['salary'].transform(\n    lambda x: x.fillna(x.mean()))\n# Replacing missing 'phd' with the mean of matching 'service'\ndf['phd'] = df.groupby('service')['phd'].transform(\n    lambda x: x.fillna(x.mean()))\n# Counting Male Staff and Female Staff\nprint(\"Number of Male Staff:\",\n      df[(df['rank'] == 'Staff') & (df['sex'] == 'Male')].shape[0])",
+        "detail": "LAB10.salaries",
+        "documentation": {}
+    },
+    {
+        "label": "df['phd']",
+        "kind": 5,
+        "importPath": "LAB10.salaries",
+        "description": "LAB10.salaries",
+        "peekOfCode": "df['phd'] = df.groupby('service')['phd'].transform(\n    lambda x: x.fillna(x.mean()))\n# Counting Male Staff and Female Staff\nprint(\"Number of Male Staff:\",\n      df[(df['rank'] == 'Staff') & (df['sex'] == 'Male')].shape[0])",
+        "detail": "LAB10.salaries",
+        "documentation": {}
+    },
+    {
+        "label": "sort_dict_by_key",
+        "kind": 2,
+        "importPath": "LAB7.10",
+        "description": "LAB7.10",
+        "peekOfCode": "def sort_dict_by_key(d):\n    # Create a list of tuples from the dictionary items\n    items = d.items()\n    # Sort the list of tuples based on the first element of each tuple (i.e., the key)\n    sorted_items = sorted(items)\n    # Create a new dictionary from the sorted list of tuples\n    sorted_dict = dict(sorted_items)\n    return sorted_dict\n# Testing the function\nd1 = {'c': 1, 'b': 2, 'a': 3}",
+        "detail": "LAB7.10",
+        "documentation": {}
+    },
+    {
+        "label": "d1",
+        "kind": 5,
+        "importPath": "LAB7.10",
+        "description": "LAB7.10",
+        "peekOfCode": "d1 = {'c': 1, 'b': 2, 'a': 3}\nsorted_dict = sort_dict_by_key(d1)\nprint(sorted_dict)  # Output: {'a': 3, 'b': 2, 'c': 1}",
+        "detail": "LAB7.10",
+        "documentation": {}
+    },
+    {
+        "label": "sorted_dict",
+        "kind": 5,
+        "importPath": "LAB7.10",
+        "description": "LAB7.10",
+        "peekOfCode": "sorted_dict = sort_dict_by_key(d1)\nprint(sorted_dict)  # Output: {'a': 3, 'b': 2, 'c': 1}",
+        "detail": "LAB7.10",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "LAB7.11",
+        "description": "LAB7.11",
+        "peekOfCode": "x = np.array([8,12,11,5,14,3,6,8,4,9])\ny = np.array([25,35,29,24,38,12,18,27,17,30])\n# Fit linear regression\ncoefficients = np.polyfit(x, y, 1)\nm = coefficients[0]\nb = coefficients[1]\nregression_line = m*x + b\n# Plot data points and regression line\nplt.scatter(x, y)\nplt.plot(x, regression_line, color='red')",
+        "detail": "LAB7.11",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "LAB7.11",
+        "description": "LAB7.11",
+        "peekOfCode": "y = np.array([25,35,29,24,38,12,18,27,17,30])\n# Fit linear regression\ncoefficients = np.polyfit(x, y, 1)\nm = coefficients[0]\nb = coefficients[1]\nregression_line = m*x + b\n# Plot data points and regression line\nplt.scatter(x, y)\nplt.plot(x, regression_line, color='red')\n# Add labels and title",
+        "detail": "LAB7.11",
+        "documentation": {}
+    },
+    {
+        "label": "coefficients",
+        "kind": 5,
+        "importPath": "LAB7.11",
+        "description": "LAB7.11",
+        "peekOfCode": "coefficients = np.polyfit(x, y, 1)\nm = coefficients[0]\nb = coefficients[1]\nregression_line = m*x + b\n# Plot data points and regression line\nplt.scatter(x, y)\nplt.plot(x, regression_line, color='red')\n# Add labels and title\nplt.xlabel('X')\nplt.ylabel('Y')",
+        "detail": "LAB7.11",
+        "documentation": {}
+    },
+    {
+        "label": "m",
+        "kind": 5,
+        "importPath": "LAB7.11",
+        "description": "LAB7.11",
+        "peekOfCode": "m = coefficients[0]\nb = coefficients[1]\nregression_line = m*x + b\n# Plot data points and regression line\nplt.scatter(x, y)\nplt.plot(x, regression_line, color='red')\n# Add labels and title\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.title('Linear Regression')",
+        "detail": "LAB7.11",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "LAB7.11",
+        "description": "LAB7.11",
+        "peekOfCode": "b = coefficients[1]\nregression_line = m*x + b\n# Plot data points and regression line\nplt.scatter(x, y)\nplt.plot(x, regression_line, color='red')\n# Add labels and title\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.title('Linear Regression')\n# Display plot",
+        "detail": "LAB7.11",
+        "documentation": {}
+    },
+    {
+        "label": "regression_line",
+        "kind": 5,
+        "importPath": "LAB7.11",
+        "description": "LAB7.11",
+        "peekOfCode": "regression_line = m*x + b\n# Plot data points and regression line\nplt.scatter(x, y)\nplt.plot(x, regression_line, color='red')\n# Add labels and title\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.title('Linear Regression')\n# Display plot\nplt.show()",
+        "detail": "LAB7.11",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_last_5",
+        "kind": 2,
+        "importPath": "LAB7.2",
+        "description": "LAB7.2",
+        "peekOfCode": "def reverse_last_5(lst):\n    if len(lst) < 5:\n        return lst\n    else:\n        return lst[:-5] + lst[-5:][::-1]",
+        "detail": "LAB7.2",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "LAB7.3",
+        "description": "LAB7.3",
+        "peekOfCode": "n = int(input(\"Enter the number of elements: \"))\nmy_list = []\n# Dynamically populate the list\nfor i in range(n):\n    my_list.append(int(input(f\"Enter element {i+1}: \")))\n# Sort the first 5 elements in descending order\nmy_list[:5] = sorted(my_list[:5], reverse=True)\n# Display the updated list\nprint(\"Updated list:\")\nprint(my_list)",
+        "detail": "LAB7.3",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 5,
+        "importPath": "LAB7.3",
+        "description": "LAB7.3",
+        "peekOfCode": "my_list = []\n# Dynamically populate the list\nfor i in range(n):\n    my_list.append(int(input(f\"Enter element {i+1}: \")))\n# Sort the first 5 elements in descending order\nmy_list[:5] = sorted(my_list[:5], reverse=True)\n# Display the updated list\nprint(\"Updated list:\")\nprint(my_list)",
+        "detail": "LAB7.3",
+        "documentation": {}
+    },
+    {
+        "label": "my_list[:5]",
+        "kind": 5,
+        "importPath": "LAB7.3",
+        "description": "LAB7.3",
+        "peekOfCode": "my_list[:5] = sorted(my_list[:5], reverse=True)\n# Display the updated list\nprint(\"Updated list:\")\nprint(my_list)",
+        "detail": "LAB7.3",
+        "documentation": {}
+    },
+    {
+        "label": "my_tuple",
+        "kind": 5,
+        "importPath": "LAB7.4",
+        "description": "LAB7.4",
+        "peekOfCode": "my_tuple = (2, 5, 8, 3, 6, 4, 1)\n# element to be searched\nsearch_element = 6\nif search_element in my_tuple:\n    index = my_tuple.index(search_element)\n    print(f\"The element {search_element} is found at position {index}.\")\nelse:\n    print(\"The element is not found.\")",
+        "detail": "LAB7.4",
+        "documentation": {}
+    },
+    {
+        "label": "search_element",
+        "kind": 5,
+        "importPath": "LAB7.4",
+        "description": "LAB7.4",
+        "peekOfCode": "search_element = 6\nif search_element in my_tuple:\n    index = my_tuple.index(search_element)\n    print(f\"The element {search_element} is found at position {index}.\")\nelse:\n    print(\"The element is not found.\")",
+        "detail": "LAB7.4",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 5,
+        "importPath": "LAB7.5",
+        "description": "LAB7.5",
+        "peekOfCode": "my_list = [2, 5, 8, 3, 6, 4, 1, 3, 7, 3]\n# element whose frequency is to be found\nsearch_element = 3\ncount = 0\nfor element in my_list:\n    if element == search_element:\n        count += 1\nprint(f\"The element {search_element} occurs {count} times in the list.\")",
+        "detail": "LAB7.5",
+        "documentation": {}
+    },
+    {
+        "label": "search_element",
+        "kind": 5,
+        "importPath": "LAB7.5",
+        "description": "LAB7.5",
+        "peekOfCode": "search_element = 3\ncount = 0\nfor element in my_list:\n    if element == search_element:\n        count += 1\nprint(f\"The element {search_element} occurs {count} times in the list.\")",
+        "detail": "LAB7.5",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "LAB7.5",
+        "description": "LAB7.5",
+        "peekOfCode": "count = 0\nfor element in my_list:\n    if element == search_element:\n        count += 1\nprint(f\"The element {search_element} occurs {count} times in the list.\")",
+        "detail": "LAB7.5",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "LAB7.6",
+        "description": "LAB7.6",
+        "peekOfCode": "n = int(input(\"Enter the number of elements to add: \"))\n# Create an empty set\nmy_set = set()\n# Add n elements to the set\nfor i in range(n):\n    element = input(\"Enter element {}: \".format(i+1))\n    my_set.add(element)\n# Display the set\nprint(\"The set is:\", my_set)\n# Display the last three elements of the set (based on insertion order)",
+        "detail": "LAB7.6",
+        "documentation": {}
+    },
+    {
+        "label": "my_set",
+        "kind": 5,
+        "importPath": "LAB7.6",
+        "description": "LAB7.6",
+        "peekOfCode": "my_set = set()\n# Add n elements to the set\nfor i in range(n):\n    element = input(\"Enter element {}: \".format(i+1))\n    my_set.add(element)\n# Display the set\nprint(\"The set is:\", my_set)\n# Display the last three elements of the set (based on insertion order)\nif len(my_set) < 3:\n    print(\"There are less than three elements in the set.\")",
+        "detail": "LAB7.6",
+        "documentation": {}
+    },
+    {
+        "label": "my_fset",
+        "kind": 5,
+        "importPath": "LAB7.7",
+        "description": "LAB7.7",
+        "peekOfCode": "my_fset = frozenset([1, 2, 3, 4])\n# Try to add a new element to the frozenset\ntry:\n    my_fset.add(5)\nexcept AttributeError:\n    print(\"Error: 'frozenset' object has no attribute 'add'\")\n# Display the frozenset\nprint(\"The frozenset is:\", my_fset)",
+        "detail": "LAB7.7",
+        "documentation": {}
+    },
+    {
+        "label": "check_strings_equal",
+        "kind": 2,
+        "importPath": "LAB7.8",
+        "description": "LAB7.8",
+        "peekOfCode": "def check_strings_equal(str1, str2):\n    if str1 == str2:\n        print(\"Both strings are equal\")\n    else:\n        print(\"Both strings are not equal\")\n# Function to find a substring from a string using negative indexing\ndef find_substring(str1, index):\n    substr = str1[index:]\n    print(\"Substring:\", substr)\n# Testing the functions",
+        "detail": "LAB7.8",
+        "documentation": {}
+    },
+    {
+        "label": "find_substring",
+        "kind": 2,
+        "importPath": "LAB7.8",
+        "description": "LAB7.8",
+        "peekOfCode": "def find_substring(str1, index):\n    substr = str1[index:]\n    print(\"Substring:\", substr)\n# Testing the functions\nstr1 = \"Hello World\"\nstr2 = \"Hello World\"\ncheck_strings_equal(str1, str2)\nstr3 = \"Hello\"\nstr4 = \"World\"\ncheck_strings_equal(str3, str4)",
+        "detail": "LAB7.8",
+        "documentation": {}
+    },
+    {
+        "label": "str1",
+        "kind": 5,
+        "importPath": "LAB7.8",
+        "description": "LAB7.8",
+        "peekOfCode": "str1 = \"Hello World\"\nstr2 = \"Hello World\"\ncheck_strings_equal(str1, str2)\nstr3 = \"Hello\"\nstr4 = \"World\"\ncheck_strings_equal(str3, str4)\nstr5 = \"Hello World\"\nfind_substring(str5, -5)",
+        "detail": "LAB7.8",
+        "documentation": {}
+    },
+    {
+        "label": "str2",
+        "kind": 5,
+        "importPath": "LAB7.8",
+        "description": "LAB7.8",
+        "peekOfCode": "str2 = \"Hello World\"\ncheck_strings_equal(str1, str2)\nstr3 = \"Hello\"\nstr4 = \"World\"\ncheck_strings_equal(str3, str4)\nstr5 = \"Hello World\"\nfind_substring(str5, -5)",
+        "detail": "LAB7.8",
+        "documentation": {}
+    },
+    {
+        "label": "str3",
+        "kind": 5,
+        "importPath": "LAB7.8",
+        "description": "LAB7.8",
+        "peekOfCode": "str3 = \"Hello\"\nstr4 = \"World\"\ncheck_strings_equal(str3, str4)\nstr5 = \"Hello World\"\nfind_substring(str5, -5)",
+        "detail": "LAB7.8",
+        "documentation": {}
+    },
+    {
+        "label": "str4",
+        "kind": 5,
+        "importPath": "LAB7.8",
+        "description": "LAB7.8",
+        "peekOfCode": "str4 = \"World\"\ncheck_strings_equal(str3, str4)\nstr5 = \"Hello World\"\nfind_substring(str5, -5)",
+        "detail": "LAB7.8",
+        "documentation": {}
+    },
+    {
+        "label": "str5",
+        "kind": 5,
+        "importPath": "LAB7.8",
+        "description": "LAB7.8",
+        "peekOfCode": "str5 = \"Hello World\"\nfind_substring(str5, -5)",
+        "detail": "LAB7.8",
+        "documentation": {}
+    },
+    {
+        "label": "is_palindrome",
+        "kind": 2,
+        "importPath": "LAB7.9",
+        "description": "LAB7.9",
+        "peekOfCode": "def is_palindrome(string):\n    # Convert the string to lowercase and remove whitespace\n    string = string.lower().replace(\" \", \"\")\n    # Check if the string is equal to its reverse\n    if string == string[::-1]:\n        return True\n    else:\n        return False\n# Testing the function\nstring1 = \"racecar\"",
+        "detail": "LAB7.9",
+        "documentation": {}
+    },
+    {
+        "label": "string1",
+        "kind": 5,
+        "importPath": "LAB7.9",
+        "description": "LAB7.9",
+        "peekOfCode": "string1 = \"racecar\"\nprint(is_palindrome(string1))  # Output: True\nstring2 = \"Hello World\"\nprint(is_palindrome(string2))  # Output: False",
+        "detail": "LAB7.9",
+        "documentation": {}
+    },
+    {
+        "label": "string2",
+        "kind": 5,
+        "importPath": "LAB7.9",
+        "description": "LAB7.9",
+        "peekOfCode": "string2 = \"Hello World\"\nprint(is_palindrome(string2))  # Output: False",
+        "detail": "LAB7.9",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "kind": 6,
+        "importPath": "LAB8.1",
+        "description": "LAB8.1",
+        "peekOfCode": "class Counter:\n    # initialize the counter value using constructor\n    def __init__(self, value=0):\n        self.value = value\n    # define a method to increment the counter by 1\n    def increment(self):\n        self.value += 1\n    # define a method to clear the counter to 0\n    def clear(self):\n        self.value = 0",
+        "detail": "LAB8.1",
+        "documentation": {}
+    },
+    {
+        "label": "DecrementingCounter",
+        "kind": 6,
+        "importPath": "LAB8.1",
+        "description": "LAB8.1",
+        "peekOfCode": "class DecrementingCounter(Counter):\n    # define a method to decrement the counter by 1\n    def decrement(self):\n        self.value -= 1\n# create an object of DecrementingCounter class with initial value 10\ndc = DecrementingCounter(10)\n# call the methods on the object\ndc.disp_value() # output: Counter value: 10\ndc.increment() # increase by 1\ndc.disp_value() # output: Counter value: 11",
+        "detail": "LAB8.1",
+        "documentation": {}
+    },
+    {
+        "label": "dc",
+        "kind": 5,
+        "importPath": "LAB8.1",
+        "description": "LAB8.1",
+        "peekOfCode": "dc = DecrementingCounter(10)\n# call the methods on the object\ndc.disp_value() # output: Counter value: 10\ndc.increment() # increase by 1\ndc.disp_value() # output: Counter value: 11\ndc.decrement() # decrease by 1\ndc.disp_value() # output: Counter value: 10\ndc.clear() # reset to 0\ndc.disp_value() # output: Counter value: 0",
+        "detail": "LAB8.1",
+        "documentation": {}
+    },
+    {
+        "label": "Vehicle",
+        "kind": 6,
+        "importPath": "LAB8.2",
+        "description": "LAB8.2",
+        "peekOfCode": "class Vehicle:\n    # initialize the instance attributes\n    def __init__(self, max_speed, mileage):\n        self.max_speed = max_speed\n        self.mileage = mileage\n    # define a function to display the attributes\n    def display(self):\n        print(f\"Max speed: {self.max_speed}, Mileage: {self.mileage}\")\n# define a Bus class that inherits from Vehicle class\nclass Bus(Vehicle):",
+        "detail": "LAB8.2",
+        "documentation": {}
+    },
+    {
+        "label": "Bus",
+        "kind": 6,
+        "importPath": "LAB8.2",
+        "description": "LAB8.2",
+        "peekOfCode": "class Bus(Vehicle):\n    # initialize the instance attributes with default value for seating capacity\n    def __init__(self, max_speed, mileage, seating_capacity=50):\n        # call the parent constructor\n        super().__init__(max_speed, mileage)\n        self.seating_capacity = seating_capacity\n    # define a function to calculate and display the total fare\n    def total_fare(self):\n        # calculate the base fare as seating capacity * 100\n        base_fare = self.seating_capacity * 100",
+        "detail": "LAB8.2",
+        "documentation": {}
+    },
+    {
+        "label": "v1",
+        "kind": 5,
+        "importPath": "LAB8.2",
+        "description": "LAB8.2",
+        "peekOfCode": "v1 = Vehicle(200, 20)\n# create an object of Bus class with max speed 150, mileage 15 and seating capacity 40\nb1 = Bus(150, 15, 40)\n# call the display method on both objects\nv1.display() # output: Max speed: 200, Mileage: 20 \nb1.display() # output: Max speed: 150, Mileage: 15\n# call the total fare method on bus object only (vehicle does not have this method)\nb1.total_fare() # output: Total fare: 4400.0",
+        "detail": "LAB8.2",
+        "documentation": {}
+    },
+    {
+        "label": "b1",
+        "kind": 5,
+        "importPath": "LAB8.2",
+        "description": "LAB8.2",
+        "peekOfCode": "b1 = Bus(150, 15, 40)\n# call the display method on both objects\nv1.display() # output: Max speed: 200, Mileage: 20 \nb1.display() # output: Max speed: 150, Mileage: 15\n# call the total fare method on bus object only (vehicle does not have this method)\nb1.total_fare() # output: Total fare: 4400.0",
+        "detail": "LAB8.2",
+        "documentation": {}
+    }
+]
