@@ -31,6 +31,8 @@ df['salary'] = df.groupby('service')['salary'].transform(
 df['phd'] = df.groupby('service')['phd'].transform(
     lambda x: x.fillna(x.mean()))
 
+
 # Counting Male Staff and Female Staff
 print("Number of Male Staff:",
       df[(df['rank'] == 'Staff') & (df['sex'] == 'Male')].shape[0])
+

@@ -1,0 +1,98 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "DecisionTreeClassifier",
+        "importPath": "sklearn.tree",
+        "description": "sklearn.tree",
+        "isExtraImport": true,
+        "detail": "sklearn.tree",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "dtc",
+        "description": "dtc",
+        "peekOfCode": "data = pd.read_csv(\"C:/Users/amare/OneDrive/Documents/vscode/6TH SEM/T&T LAB/LAB11/data.csv\")\ndata = pd.get_dummies(data, columns=['age', 'income', 'student', 'credit_rating'])\ndata.head()\nX = data.drop('buys_computer', axis=1)\ny = data['buys_computer']\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nclf = DecisionTreeClassifier(random_state=42)\nclf.fit(X_train, y_train)\ny_pred = clf.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)",
+        "detail": "dtc",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "dtc",
+        "description": "dtc",
+        "peekOfCode": "data = pd.get_dummies(data, columns=['age', 'income', 'student', 'credit_rating'])\ndata.head()\nX = data.drop('buys_computer', axis=1)\ny = data['buys_computer']\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nclf = DecisionTreeClassifier(random_state=42)\nclf.fit(X_train, y_train)\ny_pred = clf.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\nprint(\"Accuracy:\", accuracy*100)",
+        "detail": "dtc",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 5,
+        "importPath": "dtc",
+        "description": "dtc",
+        "peekOfCode": "X = data.drop('buys_computer', axis=1)\ny = data['buys_computer']\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nclf = DecisionTreeClassifier(random_state=42)\nclf.fit(X_train, y_train)\ny_pred = clf.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\nprint(\"Accuracy:\", accuracy*100)",
+        "detail": "dtc",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "dtc",
+        "description": "dtc",
+        "peekOfCode": "y = data['buys_computer']\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\nclf = DecisionTreeClassifier(random_state=42)\nclf.fit(X_train, y_train)\ny_pred = clf.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\nprint(\"Accuracy:\", accuracy*100)",
+        "detail": "dtc",
+        "documentation": {}
+    },
+    {
+        "label": "clf",
+        "kind": 5,
+        "importPath": "dtc",
+        "description": "dtc",
+        "peekOfCode": "clf = DecisionTreeClassifier(random_state=42)\nclf.fit(X_train, y_train)\ny_pred = clf.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\nprint(\"Accuracy:\", accuracy*100)",
+        "detail": "dtc",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred",
+        "kind": 5,
+        "importPath": "dtc",
+        "description": "dtc",
+        "peekOfCode": "y_pred = clf.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\nprint(\"Accuracy:\", accuracy*100)",
+        "detail": "dtc",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy",
+        "kind": 5,
+        "importPath": "dtc",
+        "description": "dtc",
+        "peekOfCode": "accuracy = accuracy_score(y_test, y_pred)\nprint(\"Accuracy:\", accuracy*100)",
+        "detail": "dtc",
+        "documentation": {}
+    }
+]
